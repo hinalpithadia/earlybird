@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .text-bg-shape{
+        position: relative;
+        margin-top: 4px;
+        /* left: -126px; */
+        z-index: -1;
+        animation: position-anim 0.7s cubic-bezier(0.29, 0, 0, 0.99) forwards;
+    }
+    @keyframes position-anim {
+        0% {
+            right: 160px;
+        }
+        100% {
+            right: 0px;
+        }
+    }
+    .text-bg-shape:before{
+        content:'';
+        position: absolute;
+        height: 65px;
+        background: linear-gradient(270deg, rgba(85, 81, 255, 0.19) 0%, rgba(85, 81, 255, 0) 100%);
+        left:-120px;
+        z-index: -1;
+        top: 0px;
+        animation: width-anim 0.7s cubic-bezier(0.29, 0, 0, 0.99) forwards ;
+    }
+    @keyframes width-anim {
+        0% {width:0px;
+            left:0px;
+        }
+        100% {width:150px;
+            left:-120px;
+        }
+    }
+    .line1 {
+        animation: drop1 8s 0s infinite;
+        animation-fill-mode: forwards;
+        animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+    }
+    
+    
+    @keyframes drop1 {
+        0% {
+            transform: translateY(0%);
+        }
+        100% {
+            transform: translateY(70%);
+            opacity: 0;
+        }
+    }
+    .line2 {
+        animation: drop2 6s 2s infinite;
+        animation-fill-mode: forwards;
+        animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+    }
+    
+    
+    @keyframes drop2 {
+        0% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(-70%);
+            opacity: 0;
+        }
+    }
+    .line3 {
+        animation: drop3 4s 0s infinite;
+        animation-fill-mode: forwards;
+        animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+    }
+    
+    
+    @keyframes drop3 {
+        0% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(70%);
+            opacity: 0;
+        }
+    }
+    .line4 {
+        animation: drop4 6s 1s infinite;
+        animation-fill-mode: forwards;
+        animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+    }
+    
+    
+    @keyframes drop4 {
+        0% {
+            transform: translateY(0%);
+        }
+        100% {
+            transform: translateY(70%);
+            opacity: 0;
+        }
+    }
+    .line5 {
+        animation: drop5 4s 0s infinite;
+        animation-fill-mode: forwards;
+        animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+    }
+    
+    
+    @keyframes drop5 {
+        0% {
+            transform: translateY(0%);
+        }
+        100% {
+            transform: translateY(-70%);
+            opacity: 0;
+        }
+    }
+    .line6 {
+        animation: drop6 3s 0s infinite;
+        animation-fill-mode: forwards;
+        animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+    }
+    
+    
+    @keyframes drop6 {
+        0% {
+            transform: translateY(0%);
+        }
+        100% {
+            transform: translateY(-70%);
+            opacity: 0;
+        }
+    }
+}
